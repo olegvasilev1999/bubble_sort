@@ -21,14 +21,13 @@ bool read_numbers(int & n, int * array)
 }
 
 int main() {
-	int n = 5;
-	int * array = new int;
-	int min;
+	int n ;
 
 	string str;
 	getline(cin, str);
 	istringstream stream(str);
 	if (stream >> n) {
+		int * array = new int[n];
 		if (read_numbers(n, array)) {
 			for (int j = 0; j < n; j++) {
 				for (int i = 1; i < n; i++) {
